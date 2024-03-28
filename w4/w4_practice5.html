@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+        /* input 태그가 사용 가능할 때
+ background-color 속성에 white 키워드를 적용합니다. */
+        input:enabled {
+            background-color: white;
+        }
+
+        /* input 태그가 사용 불가능할 때
+ background-color 속성에 gray 키워드를 적용합니다. */
+        input:disabled {
+            background-color: gray;
+        }
+
+        /* input 태그에 포커스를 맞출 때
+ background-color 속성에 orange 키워드를 적용합니다. */
+        input:focus {
+            background-color: orange;
+        }
+        input[type="radio"]:checked +label{
+            color : red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>사용 가능</h2>
+    <input>
+    <h2>사용 불가능</h2>
+    <input disabled="disabled">
+    <from>
+        <input type="radio" id="radio1"><label for="radio1" checked>하나</label>
+        <input type="radio" id="radio2"><label for="radio2">둘</label>
+    </from>
+    <form action="action.jsp">
+        <div><input type="radio" name="sex" value="male" checked>남성</div>
+        <div><input type="radio" name="sex" value="female">여성</div>
+        <div><input type="submit" value="전송"></div>
+    </form>
+    <input type="radio" name="radio_answer" value="5" />
+    <label>매우 그렇다.</label>
+
+    <input type="radio" name="radio_answer" value="4" checked/> <!--체크드되면 미리 선택된상태로 -->
+    <label>그렇다.</label>
+
+    <input type="radio" name="radio_answer" value="3" />
+    <label>보통이다.</label>
+
+</body>
+
+</html>
