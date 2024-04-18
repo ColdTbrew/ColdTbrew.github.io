@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 11a</title>
+<script src="https://cdn.tailwindcss.com"></script>	
+   </head>
+   <body>
+<div id="root">
+   <div class="container grid grid-cols-7 gap-4 text-lg text-gray-500 m-4 bg-gray-700 " >
+      <div class="col-span-2 ">
+         <div class="max-w-sm mx-auto my-10 bg-gray-700">
+            <div class="m-2 shadow-lg rounded-lg overflow-hidden ml-4">
+               <select class="w-full p-3 bg-gray-600 text-gray-300" data-dashlane-rid="3d9352a462f20516" data-form-type="other">
+                  <option>Select a sector</option>
+                  <option>Computer Hardware</option>
+                  <option>Consumer Discretionary</option>
+                  <option>Financials</option>
+                  <option>Information Technology</option>
+               </select>
+            </div>
+         </div>
+         <div class="max-w-sm mx-auto mx-5 my-5 bg-gray-600">
+            <div class=" shadow-lg rounded-lg overflow-hidden ml-4">
+               <ul class="text-gray-300 ">
+                  <li class="p-3 flex justify-between items-center user-card">
+                     <div class="flex items-center"><span class="ml-3 font-medium">FaceBook</span></div>
+                     <div><button class="text-gray-500 hover:text-gray-700" ><img src="pencil.svg" class="w-5"></button></div>
+                  </li>
+                  <li class="p-3 flex justify-between items-center user-card">
+                     <div class="flex items-center"><span class="ml-3 font-medium">Alphabet Inc Class A</span></div>
+                     <div><button class="text-gray-500 hover:text-gray-700" ><img src="pencil.svg" class="w-5"></button></div>
+                  </li>
+                  <li class="p-3 flex justify-between items-center user-card">
+                     <div class="flex items-center"><span class="ml-3 font-medium">Apple</span></div>
+                     <div><button class="text-gray-500 hover:text-gray-700" ><img src="pencil.svg" class="w-5"></button></div>
+                  </li>
+                  <li class="p-3 flex justify-between items-center user-card">
+                     <div class="flex items-center"><span class="ml-3 font-medium">AT&amp;T</span></div>
+                     <div><button class="text-gray-500 hover:text-gray-700" ><img src="pencil.svg" class="w-5"></button></div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <div class="col-span-5 ">
+         <div class="max-w-full mx-auto my-10 text-gray-300">
+            <div class=" shadow-lg rounded-lg overflow-hidden ml-4 mr-4">
+               <div class="bg-gray-600 rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+                  <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-2">
+                     <div class="text-gray-200">
+                        <p class="font-medium text-lg">Company Details</p>
+                        <p>Please fill out all the fields.</p>
+                     </div>
+                     <div class="lg:col-span-2">
+                        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-6">
+                           <div class="md:col-span-4"><label for="name">Name</label><input type="text" name="name" class="h-10 border mt-1 rounded px-4 w-full text-gray-600 bg-gray-50" value="Alphabet Inc Class A" ></div>
+                           <div class="md:col-span-1"><label for="symbol">Symbol</label><input type="text" readonly="" class="h-10 border mt-1 rounded px-4 w-full text-gray-600 bg-gray-50" value="GOOG" ></div>
+                           <div class="md:col-span-3"><label for="hq">HQ</label><input type="text" name="hq" class="h-10 border mt-1 rounded px-4 w-full text-gray-600 bg-gray-50" value="Mountain View, California" ></div>
+                           <div class="md:col-span-2"><label for="sector">Sector</label><input type="text" name="sector" class="h-10 border mt-1 rounded px-4 w-full text-gray-600 bg-gray-50" value="Information Technology" ></div>
+                           <div class="md:col-span-5"><label for="description">Description</label><input type="text" name="description" class="h-10 border mt-1 rounded px-4 w-full text-gray-600 bg-gray-50" value="desc" ></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>     
+
+   </body>
+</html>
