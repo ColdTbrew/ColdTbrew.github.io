@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>방문 시간이 오전 오후에 따라 변하는 배경색</title>
+</head>
+
+<body>
+    <h3>오전이면 lightskyblue, 오후이면 orange 배경</h3>
+    <hr>
+    <script>
+        let current = new Date(); // 현재 시간 값을 가진 Date 객체 생성
+        if (current.getHours() < 12)
+            document.body.style.backgroundColor = "lightskyblue";
+        else
+            document.body.style.backgroundColor = "orange";
+
+        document.write("<h3>일,월,화요일은 red, 다른 요일은 green 색상으로</h3>");
+
+        document.write("현재 시간 : ");
+        document.write(current.getHours() + "시,");
+        document.write(current.getMinutes() + "분,");
+        document.write(current.getSeconds() + "초<br>");
+        let week = ["일", "월", "화", "수", "목", "금", "토"];
+        if (current.getDay() == 0 || current.getDay() == 1 || current.getDay() == 2) // 일요일
+            document.body.style.color = "red";
+        else
+            document.body.style.color = "green";
+
+        document.write("오늘 : ");
+        document.write(current.getDate() + "일,");
+        document.write(week[current.getDay()] + "요일<br>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color:red;
+        }
+    </style>
+    <script>
+        function change(){
+            let str=document.getElementById("myname").value;
+            str += "의 소속 학과는 "
+            str +="<span>"
+            str+=document.getElementById("stdID").value;
+            str +="</span>"
+            document.getElementById("myP").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    이름: <input id="myname" type="text"><br>
+    학과: <input id="stdID" type="text"><br>
+    <hr>
+    <button type="submit" onclick="change()">이름과 학과 확인</button>
+    <p id="myP"></p>
+</body>
+</html>

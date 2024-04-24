@@ -1,0 +1,9 @@
+# Ignore the mid_term folder
+mid_term/ans
+
+# Ignore other files and folders that you don't want to track
+*.tmp
+*.log
+*.bak
+*.swp
+.DS_Store
