@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+        ul {
+            overflow: auto;
+        }
+        img {
+        float: left;
+        }
+        .top li {
+            list-style: none;
+            float: left;
+            padding: 15px;
+        }
+
+        .top li:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        .top  li:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .top li:nth-child(2n) {
+            background-color: #FF0003;
+        }
+
+        .top  li:nth-child(2n+1) {
+            background-color: #800000;
+        }
+        .top{
+            border: 2px;
+            border-color: black;
+        }
+        .bar {
+            
+            float: left;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+
+        <img src="inha_University_logotype.png" alt="인하대학교">
+        
+        <ul>
+            <li>교육</li>
+            <li>입학/취업</li>
+            <li>산학/연구</li>
+            <li>학사</li>
+            <li>대학생활</li>
+            <li>인하소식</li>
+            <li>인하소개</li>
+        </ul>
+    </div> 
+    <hr>
+
+    <ul class ="bar">
+        <li>뉴스</li>
+        <li>소식</li>
+        <li>연구</li>
+        <li>서비스</li>
+        <li>sns</li>
+    </ul>
+    <div>
+        <h2>
+            창학이념과 교육목표
+        </h2>
+        <h3>
+            인격도야, 진리탐구, 사회봉사
+        </h3>
+        <p>
+            인하대학교는 1954년 조국부강, 민족번영의 염원으로 개교하여 창의, 근면, 봉사의 창학정신을 구현하기 위한 인격도야, 진리탐구, 사회봉사의 3대 교육 이념을 표방하고 있다.
+        </p>
+        <p>
+            이러한 창학이념 아래 인하대학교 공과대학은 국가사회 발전을 이끌 전인적 인재 양성과 국가산업 발전을 선도할 최고 수준의 전문 공학 인력 양성을 교육목적으로 두고 있으며, 다음의 교육목표를 지향한다.
+시대 환경 변화를 선도하는 글로벌 인재 양성
+문제해결능력과 창의성을 갖춘 공학기술 인력 양성
+올바른 가치관과 윤리의식을 갖춘 인재 양성
+        </p>
+    </div>
+</body>
+
+</html>
