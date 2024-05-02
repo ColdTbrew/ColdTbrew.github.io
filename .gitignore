@@ -1,6 +1,6 @@
 # Ignore the mid_term folder
 mid_term/ans
-
+*/node_modules/
 # Ignore other files and folders that you don't want to track
 *.tmp
 *.log
