@@ -7,3 +7,6 @@ mid_term/ans
 *.bak
 *.swp
 .DS_Store
+node_modules/ 
+.env 
+*.env 
