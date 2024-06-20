@@ -11,79 +11,95 @@
 <body>
   <div class="container">
     <div class="header">
-      <div class="background-image">
-        <img src="InhaUniversity_Emblem.jpg" alt="Inha University Emblem" width="100">
+      <div class="title-container">
+        <div class="background-image">
+          <img src="InhaUniversity_Emblem.jpg" alt="Inha University Emblem" width="100">
+        </div>
+        <h1 class="title-text">해동라운지 좌석 현황</h1>
       </div>
-      <h1>해동라운지 좌석 현황</h1>
-      <div id="current-time"></div>
-    </div>
-    <div class="top-seats">
-      <div class="seat" id="seat1"><span></span></div>
-      <div class="seat" id="seat2"><span></span></div>
-      <div class="seat" id="seat3"><span></span></div>
-      <div class="seat" id="seat4"><span></span></div>
-      <div class="seat" id="seat5"><span></span></div>
-      <div class="seat" id="seat6"><span></span></div>
-      <div class="seat" id="seat7"><span></span></div>
-      <div class="seat" id="seat8"><span></span></div>
-      <div class="seat" id="seat9"><span></span></div>
-      <div class="seat" id="seat10"><span></span></div>
-      <div class="seat" id="seat11"><span></span></div>
-      <div class="seat" id="seat11"><span></span></div>
-      <div class="seat" id="seat11"><span></span></div>
-    </div>
-    <div class="middle-seats">
-      <div class="middle-seat-island">
-        <div class="seat" id="seat12"><span></span></div>
-        <div class="seat" id="seat13"><span></span></div>
-        <div class="seat" id="seat14"><span></span></div>
-        <div class="seat" id="seat15"><span></span></div>
-        <div class="seat" id="seat12"><span></span></div>
-        <div class="seat" id="seat13"><span></span></div>
-        <div class="seat" id="seat14"><span></span></div>
-        <div class="seat" id="seat15"><span></span></div>
+      <div id="time_and_button">
+        <div id="current-time"></div>
       </div>
-      <div class="middle-seat-island">
-        <div class="seat" id="seat16"><span></span></div>
-        <div class="seat" id="seat17"><span></span></div>
-        <div class="seat" id="seat18"><span></span></div>
-        <div class="seat" id="seat19"><span></span></div>
-        <div class="seat" id="seat12"><span></span></div>
-        <div class="seat" id="seat13"><span></span></div>
-        <div class="seat" id="seat14"><span></span></div>
-        <div class="seat" id="seat15"><span></span></div>
-      </div>
-      <div class="middle-seat-island">
-        <div class="seat" id="seat20"><span></span></div>
-        <div class="seat" id="seat21"><span></span></div>
-        <div class="seat" id="seat22"><span></span></div>
-        <div class="seat" id="seat23"><span></span></div>
-        <div class="seat" id="seat12"><span></span></div>
-        <div class="seat" id="seat13"><span></span></div>
-        <div class="seat" id="seat14"><span></span></div>
-        <div class="seat" id="seat15"><span></span></div>
-      </div>
-      <div class="middle-seat-island">
-        <div class="seat" id="seat24"><span></span></div>
-        <div class="seat" id="seat25"><span></span></div>
-        <div class="seat" id="seat26"><span></span></div>
-        <div class="seat" id="seat27"><span></span></div>
-        <div class="seat" id="seat12"><span></span></div>
-        <div class="seat" id="seat13"><span></span></div>
-        <div class="seat" id="seat14"><span></span></div>
-        <div class="seat" id="seat15"><span></span></div>
-      </div>
-      <div class="middle-seat-island">
-        <div class="seat" id="seat24"><span></span></div>
-        <div class="seat" id="seat25"><span></span></div>
-        <div class="seat" id="seat26"><span></span></div>
-        <div class="seat" id="seat27"><span></span></div>
-        <div class="seat" id="seat12"><span></span></div>
-        <div class="seat" id="seat13"><span></span></div>
-        <div class="seat" id="seat14"><span></span></div>
-        <div class="seat" id="seat15"><span></span></div>
+      <div id="time_and_button">
+        <button id="toggle-stats">사용현황</button>
+        <button id="reset-stats">사용현황 초기화</button>
+        <button id="suggestion-button">건의하기</button> </div>
+        <div id="suggestion-box">
+        <textarea id="suggestion-input" placeholder="건의 내용을 입력하세요"></textarea>
+        <button id="submit-suggestion">제출</button>
+        <div id="suggestion-list"></div>
       </div>
     </div>
+    <div id="seat-container" class="seat-container">
+      <div class="top-seats">
+        <div class="seat" id="seat1"><span>1</span></div>
+        <div class="seat" id="seat2"><span>2</span></div>
+        <div class="seat" id="seat3"><span>3</span></div>
+        <div class="seat" id="seat4"><span>4</span></div>
+        <div class="seat" id="seat5"><span>5</span></div>
+        <div class="seat" id="seat6"><span>6</span></div>
+        <div class="seat" id="seat7"><span>7</span></div>
+        <div class="seat" id="seat8"><span>8</span></div>
+        <div class="seat" id="seat9"><span>9</span></div>
+        <div class="seat" id="seat10"><span>10</span></div>
+        <div class="seat" id="seat11"><span>11</span></div>
+        <div class="seat" id="seat12"><span>12</span></div>
+        <div class="seat" id="seat13"><span>13</span></div>
+      </div>
+      <div class="middle-seats">
+        <div class="middle-seat-island">
+          <div class="seat" id="seat14"><span>14</span></div> 
+          <div class="seat" id="seat15"><span>15</span></div> 
+          <div class="seat" id="seat16"><span>16</span></div> 
+          <div class="seat" id="seat17"><span>17</span></div> 
+          <div class="seat" id="seat18"><span>18</span></div> 
+          <div class="seat" id="seat19"><span>19</span></div> 
+          <div class="seat" id="seat20"><span>20</span></div> 
+          <div class="seat" id="seat21"><span>21</span></div> 
+        </div>
+        <div class="middle-seat-island">
+          <div class="seat" id="seat22"><span>22</span></div> 
+          <div class="seat" id="seat23"><span>23</span></div> 
+          <div class="seat" id="seat24"><span>24</span></div> 
+          <div class="seat" id="seat25"><span>25</span></div> 
+          <div class="seat" id="seat26"><span>26</span></div> 
+          <div class="seat" id="seat27"><span>27</span></div> 
+          <div class="seat" id="seat28"><span>28</span></div> 
+          <div class="seat" id="seat29"><span>29</span></div> 
+        </div>
+        <div class="middle-seat-island">
+          <div class="seat" id="seat30"><span>30</span></div> 
+          <div class="seat" id="seat31"><span>31</span></div> 
+          <div class="seat" id="seat32"><span>32</span></div> 
+          <div class="seat" id="seat33"><span>33</span></div> 
+          <div class="seat" id="seat34"><span>34</span></div> 
+          <div class="seat" id="seat35"><span>35</span></div> 
+          <div class="seat" id="seat36"><span>36</span></div> 
+          <div class="seat" id="seat37"><span>37</span></div> 
+        </div>
+        <div class="middle-seat-island">
+          <div class="seat" id="seat39"><span>39</span></div> 
+          <div class="seat" id="seat40"><span>40</span></div> 
+          <div class="seat" id="seat41"><span>41</span></div> 
+          <div class="seat" id="seat43"><span>43</span></div> 
+          <div class="seat" id="seat44"><span>44</span></div> 
+          <div class="seat" id="seat45"><span>45</span></div> 
+          <div class="seat" id="seat46"><span>46</span></div> 
+          <div class="seat" id="seat47"><span>47</span></div>
+        </div>
+        <div class="middle-seat-island">
+          <div class="seat" id="seat48"><span>48</span></div> 
+          <div class="seat" id="seat49"><span>49</span></div> 
+          <div class="seat" id="seat50"><span>50</span></div> 
+          <div class="seat" id="seat51"><span>51</span></div> 
+          <div class="seat" id="seat52"><span>52</span></div> 
+          <div class="seat" id="seat53"><span>53</span></div> 
+          <div class="seat" id="seat54"><span>54</span></div> 
+          <div class="seat" id="seat55"><span>55</span></div> 
+        </div>
+    </div>
+    <div id="stats-container"> </div>
+    
     <div class="legend">
       <div class="legend-item">
         <div class="legend-box gray"></div>
@@ -106,10 +122,13 @@
         <span>3시간 경과</span>
       </div>
     </div>
-  </div>
-  </div>
+      <div id="suggestion-box">
+        <textarea id="suggestion-input" placeholder="건의 내용을 입력하세요"></textarea>
+        <button id="submit-suggestion">제출</button>
+        <div id="suggestion-list"></div>
+      </div> 
 
-
+  </div>
   <script src="script.js"></script>
 </body>
 
