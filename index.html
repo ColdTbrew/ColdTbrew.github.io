@@ -1,19 +1,55 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>SHC_page</title>
-        <style>
-            h1 {
-                color: blue;
-                font-family: verdana;
-                font-size: 300%;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Hello, world!</h1>
-        <p>Hello! Im seunghyuk Choi, Republic of Korea</p>
-        <p>
-            <img src = "spacex.jpeg" alt = "spacex" width = "700"">
-        </p>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>승혁의 홈페이지</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <header class="hero">
+        <nav class="top-nav">
+            <span class="logo">SHC</span>
+            <a href="#about">소개</a>
+            <a href="#favorites">관심사</a>
+            <a href="#contact">연락</a>
+        </nav>
+
+        <div class="hero-content">
+            <p class="tag">✨ Welcome to my world</p>
+            <h1>안녕하세요, 최승혁입니다</h1>
+            <p class="intro">
+                한국에서 공부하고 개발하는 학생입니다. 깔끔하고 감성적인 웹을 만드는 걸 좋아해요.
+            </p>
+            <a class="cta" href="#about">더 알아보기</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="card">
+            <h2>About Me</h2>
+            <p>
+                안녕하세요! 저는 새로운 기술을 배우고 직접 만들어보는 것을 좋아합니다.
+                이 홈페이지는 저를 소개하는 작은 공간이에요.
+            </p>
+        </section>
+
+        <section id="favorites" class="card">
+            <h2>Favorites</h2>
+            <div class="chip-wrap">
+                <span class="chip">🚀 Space</span>
+                <span class="chip">💻 Web Development</span>
+                <span class="chip">🎮 Games</span>
+                <span class="chip">🎵 Music</span>
+            </div>
+            <img src="spacex.jpeg" alt="우주 이미지" class="feature-image" />
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>함께 재미있는 프로젝트를 하고 싶다면 언제든 연락해주세요!</p>
+            <a class="contact-link" href="mailto:hello@example.com">hello@example.com</a>
+        </section>
+    </main>
+</body>
 </html>
