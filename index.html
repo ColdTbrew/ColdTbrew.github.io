@@ -4,50 +4,130 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>승혁의 홈페이지</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Nanum+Gothic:wght@400;700;800&amp;display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="Style.css" />
 </head>
 <body>
-    <header class="hero">
-        <nav class="top-nav">
-            <span class="logo">SHC</span>
-            <a href="#about">소개</a>
-            <a href="#favorites">관심사</a>
-            <a href="#contact">연락</a>
+    <div class="bg-orb orb-left" aria-hidden="true"></div>
+    <div class="bg-orb orb-right" aria-hidden="true"></div>
+
+    <header class="hero shell">
+        <nav class="top-nav panel">
+            <span class="logo">CHOI SEUNGHYUK</span>
+            <div class="nav-links">
+                <a href="#about">소개</a>
+                <a href="#portfolio">포트폴리오</a>
+                <a href="#favorites">관심사</a>
+                <a href="#contact">연락</a>
+            </div>
         </nav>
 
-        <div class="hero-content">
-            <p class="tag">✨ Welcome to my world</p>
-            <h1>안녕하세요, 최승혁입니다</h1>
-            <p class="intro">
-                한국에서 공부하고 개발하는 학생입니다. 깔끔하고 감성적인 웹을 만드는 걸 좋아해요.
-            </p>
-            <a class="cta" href="#about">더 알아보기</a>
+        <div class="hero-grid">
+            <div class="hero-content">
+                <p class="tag">Personal Web Studio</p>
+                <h1>안녕하세요, 최승혁입니다</h1>
+                <p class="intro">
+                    한국에서 공부하고 개발하는 학생입니다. 작은 아이디어도 화면 위에서 인상적으로 보이게 만드는 것을 좋아합니다.
+                </p>
+                <div class="hero-actions">
+                    <a class="cta" href="#portfolio">작업 보기</a>
+                    <a class="ghost-btn" href="#contact">같이 만들기</a>
+                </div>
+                <div class="kpi-grid">
+                    <article class="kpi-card">
+                        <p class="kpi-value">3+</p>
+                        <p class="kpi-label">Years Learning</p>
+                    </article>
+                    <article class="kpi-card">
+                        <p class="kpi-value">25+</p>
+                        <p class="kpi-label">Practice Projects</p>
+                    </article>
+                    <article class="kpi-card">
+                        <p class="kpi-value">100%</p>
+                        <p class="kpi-label">Hands-on Builder</p>
+                    </article>
+                </div>
+            </div>
+            <aside class="hero-showcase panel">
+                <p class="showcase-title">Current Focus</p>
+                <h3>입체적인 UI와 빠른 사용자 흐름</h3>
+                <ul class="showcase-list">
+                    <li>콘셉트와 톤에 맞춘 색상 시스템 설계</li>
+                    <li>모바일/데스크톱 모두 자연스러운 반응형</li>
+                    <li>첫 화면에서 메시지가 바로 보이는 구조</li>
+                </ul>
+                <a class="showcase-link" href="https://github.com/ColdTbrew/ColdTbrew.github.io" target="_blank" rel="noreferrer">GitHub 저장소 보기</a>
+            </aside>
         </div>
     </header>
 
-    <main>
-        <section id="about" class="card">
-            <h2>About Me</h2>
-            <p>
-                안녕하세요! 저는 새로운 기술을 배우고 직접 만들어보는 것을 좋아합니다.
-                이 홈페이지는 저를 소개하는 작은 공간이에요.
-            </p>
-        </section>
-
-        <section id="favorites" class="card">
-            <h2>Favorites</h2>
-            <div class="chip-wrap">
-                <span class="chip">🚀 Space</span>
-                <span class="chip">💻 Web Development</span>
-                <span class="chip">🎮 Games</span>
-                <span class="chip">🎵 Music</span>
+    <main class="shell">
+        <section id="about" class="card panel reveal">
+            <p class="eyebrow">About</p>
+            <h2>디자인과 구현을 같이 보는 개발자</h2>
+            <div class="about-layout">
+                <p>
+                    안녕하세요! 저는 새로운 기술을 배우고 직접 만들어보는 것을 좋아합니다.
+                    이 홈페이지는 저를 소개하는 작은 공간이에요.
+                </p>
+                <p>
+                    보기 좋은 페이지가 오래 기억된다고 믿고, 색감, 타이포, 간격 같은 디테일을
+                    신경 써서 작업합니다.
+                </p>
             </div>
-            <img src="spacex.jpeg" alt="우주 이미지" class="feature-image" />
         </section>
 
-        <section id="contact" class="card">
-            <h2>Contact</h2>
-            <p>함께 재미있는 프로젝트를 하고 싶다면 언제든 연락해주세요!</p>
+        <section id="portfolio" class="card panel reveal">
+            <p class="eyebrow">Portfolio</p>
+            <h2>최근 작업들</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <p class="project-type">Web UI</p>
+                    <h3>개인 홈페이지 리디자인</h3>
+                    <p>랜딩 구조, 카드 컴포넌트, 색상 토큰으로 톤을 통일하고 반응형까지 정리한 프로젝트입니다.</p>
+                    <a href="index.html">현재 페이지</a>
+                </article>
+                <article class="project-card">
+                    <p class="project-type">Node Practice</p>
+                    <h3>Express API 실습</h3>
+                    <p>파일 기반 데이터 제공과 라우팅을 분리해 API 서버 구조를 익힌 실습 코드입니다.</p>
+                    <a href="express_lab/public/index.html">실습 보기</a>
+                </article>
+                <article class="project-card">
+                    <p class="project-type">Frontend Lab</p>
+                    <h3>React 컴포넌트 연습</h3>
+                    <p>컴포넌트 단위 UI 조립과 상태 기반 렌더링을 중심으로 만든 학습 결과물입니다.</p>
+                    <a href="w7/lab11b/lab11b-ex10-markup-only.html">예시 보기</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="favorites" class="card panel reveal">
+            <p class="eyebrow">Favorites</p>
+            <h2>제가 좋아하는 주제들</h2>
+            <div class="chip-wrap">
+                <span class="chip">Space</span>
+                <span class="chip">Web Development</span>
+                <span class="chip">Games</span>
+                <span class="chip">Music</span>
+            </div>
+            <div class="media-grid">
+                <img src="spacex.jpeg" alt="우주 이미지" class="feature-image" />
+                <div class="mini-note">
+                    <p>
+                        가장 좋아하는 테마는 우주와 인터랙션입니다. 넓은 배경 위에 확실한
+                        메시지를 두는 구성을 선호합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="card panel reveal contact-panel">
+            <p class="eyebrow">Contact</p>
+            <h2>함께 재미있는 프로젝트를 만들어요</h2>
+            <p>아이디어가 있다면 편하게 메일 주세요. 빠르게 확인하고 답장드립니다.</p>
             <a class="contact-link" href="mailto:hello@example.com">hello@example.com</a>
         </section>
     </main>
