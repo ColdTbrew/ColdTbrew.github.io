@@ -17,6 +17,7 @@
         <nav class="top-nav panel">
             <span class="logo">CHOI SEUNGHYUK</span>
             <div class="nav-links">
+                <a href="#gallery">갤러리</a>
                 <a href="#about">소개</a>
                 <a href="#portfolio">포트폴리오</a>
                 <a href="#favorites">관심사</a>
@@ -32,7 +33,7 @@
                     한국에서 공부하고 개발하는 학생입니다. 작은 아이디어도 화면 위에서 인상적으로 보이게 만드는 것을 좋아합니다.
                 </p>
                 <div class="hero-actions">
-                    <a class="cta" href="#portfolio">작업 보기</a>
+                    <a class="cta" href="#gallery">갤러리 보기</a>
                     <a class="ghost-btn" href="#contact">같이 만들기</a>
                 </div>
                 <div class="kpi-grid">
@@ -64,6 +65,17 @@
     </header>
 
     <main class="shell">
+        <section id="gallery" class="card panel reveal">
+            <p class="eyebrow">Gallery</p>
+            <h2>스크롤하며 둘러보는 이미지 갤러리</h2>
+            <p class="gallery-intro">
+                핀터레스트처럼 아래로 내리면 새로운 이미지가 계속 이어집니다. 이미지를 눌러 크게 볼 수 있어요.
+            </p>
+            <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
+            <div id="gallery-sentinel" class="gallery-sentinel" aria-hidden="true"></div>
+            <p id="gallery-status" class="gallery-status">이미지를 불러오는 중...</p>
+        </section>
+
         <section id="about" class="card panel reveal">
             <p class="eyebrow">About</p>
             <h2>디자인과 구현을 같이 보는 개발자</h2>
@@ -131,5 +143,11 @@
             <a class="contact-link" href="mailto:hello@example.com">hello@example.com</a>
         </section>
     </main>
+
+    <div id="gallery-lightbox" class="lightbox" aria-hidden="true">
+        <button id="lightbox-close" class="lightbox-close" aria-label="닫기">닫기</button>
+        <img id="lightbox-image" src="" alt="확대 이미지" />
+    </div>
+    <script src="gallery.js"></script>
 </body>
 </html>

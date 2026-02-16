@@ -313,6 +313,104 @@ h2 {
     color: var(--text-muted);
 }
 
+.gallery-intro {
+    color: var(--text-muted);
+    margin-bottom: 1.05rem;
+}
+
+.gallery-grid {
+    column-count: 4;
+    column-gap: 0.85rem;
+}
+
+.gallery-item {
+    break-inside: avoid;
+    margin-bottom: 0.85rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 12px 24px rgba(36, 28, 18, 0.08);
+}
+
+.gallery-button {
+    display: block;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.24s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+.gallery-caption {
+    padding: 0.56rem 0.68rem 0.62rem;
+    font-size: 0.79rem;
+    color: var(--text-muted);
+    font-weight: 700;
+}
+
+.gallery-sentinel {
+    height: 2px;
+}
+
+.gallery-status {
+    margin-top: 0.58rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(15, 12, 10, 0.84);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 30;
+}
+
+.lightbox.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox img {
+    width: min(1200px, 100%);
+    max-height: 88vh;
+    border-radius: 16px;
+    object-fit: contain;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(0, 0, 0, 0.32);
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.42rem 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -435,6 +533,10 @@ h2 {
     animation-delay: 0.05s;
 }
 
+#gallery {
+    animation-delay: 0.03s;
+}
+
 #portfolio {
     animation-delay: 0.1s;
 }
@@ -472,6 +574,10 @@ h2 {
 }
 
 @media (max-width: 860px) {
+    .gallery-grid {
+        column-count: 2;
+    }
+
     .hero-grid,
     .about-layout,
     .media-grid,
@@ -494,6 +600,10 @@ h2 {
 }
 
 @media (max-width: 560px) {
+    .gallery-grid {
+        column-count: 1;
+    }
+
     .shell {
         width: min(1080px, calc(100% - 1.35rem));
     }
