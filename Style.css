@@ -136,6 +136,24 @@ p {
     animation: rise 0.9s ease forwards;
 }
 
+.hero-badges {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.48rem;
+}
+
+.hero-badges span {
+    border: 1px solid rgba(31, 36, 48, 0.16);
+    background: rgba(255, 255, 255, 0.66);
+    border-radius: 999px;
+    padding: 0.34rem 0.66rem;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.03em;
+    color: #4f5767;
+}
+
 .tag {
     font-size: 0.84rem;
     letter-spacing: 0.12em;
@@ -278,6 +296,40 @@ h1 {
     color: #1f796f;
 }
 
+.hero-band {
+    margin-top: 0.95rem;
+    border-radius: 18px;
+    padding: 0.72rem 0.8rem;
+    overflow: hidden;
+}
+
+.hero-band-title {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent-strong);
+    font-weight: 800;
+    margin-bottom: 0.42rem;
+}
+
+.hero-band-track {
+    display: flex;
+    gap: 0.56rem;
+    width: max-content;
+    animation: track-slide 16s linear infinite;
+}
+
+.hero-band-track span {
+    border-radius: 999px;
+    background: rgba(44, 159, 147, 0.12);
+    border: 1px solid rgba(44, 159, 147, 0.28);
+    padding: 0.42rem 0.74rem;
+    font-size: 0.78rem;
+    color: #1f6f66;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
 main {
     display: grid;
     gap: 0.96rem;
@@ -331,6 +383,8 @@ h2 {
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, 0.72);
     box-shadow: 0 12px 24px rgba(36, 28, 18, 0.08);
+    isolation: isolate;
+    contain: layout paint;
 }
 
 .gallery-button {
@@ -341,13 +395,22 @@ h2 {
     margin: 0;
     background: transparent;
     cursor: zoom-in;
+    appearance: none;
+    -webkit-appearance: none;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 0;
 }
 
 .gallery-item img {
     width: 100%;
+    max-width: 100%;
+    height: auto;
     display: block;
     transform: scale(1);
+    transform-origin: center center;
     transition: transform 0.24s ease;
+    vertical-align: middle;
 }
 
 .gallery-item:hover img {
@@ -573,6 +636,16 @@ h2 {
     }
 }
 
+@keyframes track-slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width: 860px) {
     .gallery-grid {
         column-count: 2;
@@ -592,6 +665,10 @@ h2 {
 
     .hero-content {
         margin-top: 0;
+    }
+
+    .hero-band-track {
+        animation-duration: 20s;
     }
 
     .feature-image {
@@ -617,6 +694,10 @@ h2 {
 
     .hero-grid {
         margin-top: 1rem;
+    }
+
+    .hero-band {
+        margin-top: 0.7rem;
     }
 
     .nav-links {
